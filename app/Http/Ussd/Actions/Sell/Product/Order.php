@@ -12,7 +12,7 @@ class Order extends Action
             $curl = curl_init();
 
             curl_setopt_array($curl, [
-                CURLOPT_URL => 'https://gizpassion.com/api/sell/',
+                CURLOPT_URL => 'https://tundatamu.co.ke/api/sell/',
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => '',
                 CURLOPT_MAXREDIRS => 10,

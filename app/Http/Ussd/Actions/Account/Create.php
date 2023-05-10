@@ -36,7 +36,7 @@ class Create extends Action
             $curl = curl_init();
 
             curl_setopt_array($curl, [
-                CURLOPT_URL => 'https://gizpassion.com/api/farmers/',
+                CURLOPT_URL => 'https://tundatamu.co.ke/api/farmers/',
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => '',
                 CURLOPT_MAXREDIRS => 10,

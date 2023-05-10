@@ -37,7 +37,7 @@ class TransactionObserver
                 $curl = curl_init();
 
                 curl_setopt_array($curl, [
-                    CURLOPT_URL => 'https://gizpassion.com/marketplace/checkout/orders/mpesa-webhook/',
+                    CURLOPT_URL => 'https://tundatamu.co.ke/marketplace/checkout/orders/mpesa-webhook/',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => '',
                     CURLOPT_MAXREDIRS => 10,

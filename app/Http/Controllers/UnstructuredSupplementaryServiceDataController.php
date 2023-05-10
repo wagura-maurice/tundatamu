@@ -53,7 +53,7 @@ class UnstructuredSupplementaryServiceDataController extends Controller
                 $curl = curl_init();
 
                 curl_setopt_array($curl, [
-                    CURLOPT_URL => 'https://gizpassion.com/api/farmers?search=' . substr(phoneNumberPrefix($request->phoneNumber), -9),
+                    CURLOPT_URL => 'https://tundatamu.co.ke/api/farmers?search=' . substr(phoneNumberPrefix($request->phoneNumber), -9),
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => '',
                     CURLOPT_MAXREDIRS => 10,
