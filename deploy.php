@@ -5,10 +5,10 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Project name
-set('application', 'e4impact');
+set('application', 'tundatamu');
 
 // Project repository
-set('repository', 'git@github.com:wagura-maurice/e4impact.git');
+set('repository', 'git@github.com:wagura-maurice/tundatamu.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
@@ -55,7 +55,7 @@ task('release:theBaby', function () {
     // optimize config and cache
     run('{{bin/php}} {{release_path}}/artisan optimize');
     // Run database migrations
-    run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed --force');
+    // run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed --force');
     // serve the app up
     run('{{bin/php}} {{release_path}}/artisan up');
 })->once();
