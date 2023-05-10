@@ -33,3 +33,5 @@ server {
 sudo ln -s /etc/nginx/sites-available/tundatamu.e-granary.com /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
+
+sudo certbot --nginx -d tundatamu.e-granary.com
