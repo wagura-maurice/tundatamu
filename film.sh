@@ -1,13 +1,13 @@
-sudo nano /etc/nginx/sites-available/e4impact.e-granary.com
+sudo nano /etc/nginx/sites-available/tundatamu.e-granary.com
 
 server {
         listen 80;
         listen [::]:80;
 
-        root /var/www/html/e4impact/current/public;
+        root /var/www/html/tundatamu/current/public;
         index index.php index.html index.htm index.nginx-debian.html;
 
-        server_name e4impact.e-granary.com;
+        server_name tundatamu.e-granary.com;
 
         location / {
                 try_files $uri $uri/ /index.php?$query_string;
@@ -30,6 +30,6 @@ server {
 
 }
 
-sudo ln -s /etc/nginx/sites-available/e4impact.e-granary.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/tundatamu.e-granary.com /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
