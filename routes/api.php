@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlockChainController;
 use App\Http\Controllers\Mpesa\LNMOController;
 use App\Http\Controllers\UnstructuredSupplementaryServiceDataController;
 
@@ -31,3 +32,5 @@ Route::group(['prefix' => '/ipn'], function () {
         Route::post('/mpesa/lnmo/callback', [LNMOController::class, 'callback'])->name('mpesa.lnmo.callback');
     });
 });
+
+Route::get('/blockchain/generate/QR', [BlockChainController::class, 'generateQR'])->name('blockchain.generateQR');
