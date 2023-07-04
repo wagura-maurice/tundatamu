@@ -26,6 +26,32 @@ if (! function_exists('eThrowable')) {
     }
 }
 
+if (! function_exists('build_query_string')) {
+    /**
+     * The function "build_query_string" is used to build a query string from an array of data, with
+     * support for nested arrays.
+     * 
+     * @param data The "data" parameter is an array that contains the key-value pairs that you want to
+     * include in the query string. Each key-value pair represents a parameter and its value in the
+     * query string.
+     * @param prefix The prefix parameter is an optional string that is added to the beginning of each
+     * key in the query string. It is used to create nested keys in the query string.
+     * 
+     * @return a query string that is built from the given data array.
+     */
+    function build_query_string($data, $prefix = '') {
+        $query = '';
+        foreach ($data as $key => $value) {
+            if (is_array($value)) {
+                $query .= build_query_string($value, "{$prefix}{$key}%5B%5D.");
+            } else {
+                $query .= "{$prefix}{$key}=" . urlencode($value) . "&";
+            }
+        }
+        return $query;
+    }
+}
+
 if (! function_exists('updateSetting')) {
     /**
      * "Update a setting in the database."
