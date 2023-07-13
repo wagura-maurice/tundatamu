@@ -22,9 +22,9 @@ add('shared_dirs', []);
 add('writable_dirs', []);
 
 // Hosts
-host('197.243.22.44')
+host('198.211.20.99')
     ->user('deployer')
-    ->port(5432)
+    ->port(22)
     ->identityFile('~/.ssh/id_rsa') // ssh on local machine that links to the deployer on vps
     ->set('deploy_path', '/var/www/html/{{application}}');
 
@@ -55,7 +55,7 @@ task('release:theBaby', function () {
     // optimize config and cache
     run('{{bin/php}} {{release_path}}/artisan optimize');
     // Run database migrations
-    run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed --force');
+    // run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed --force');
     // serve the app up
     run('{{bin/php}} {{release_path}}/artisan up');
 })->once();
