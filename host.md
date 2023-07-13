@@ -4,7 +4,7 @@ server {
 listen 80;
 listen [::]:80;
 
-        root /var/www/html/jenga/current/public;
+        root /var/www/html/tundatamu/current/public;
         index index.php index.html index.htm index.nginx-debian.html;
 
         server_name tundatamu.waguramaurice.com;
