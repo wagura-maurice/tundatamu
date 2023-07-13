@@ -1,4 +1,4 @@
-sudo nano /etc/nginx/sites-available/e4Impact.waguramaurice.com
+sudo nano /etc/nginx/sites-available/tundatamu.waguramaurice.com
 
 server {
 listen 80;
@@ -7,7 +7,7 @@ listen [::]:80;
         root /var/www/html/jenga/current/public;
         index index.php index.html index.htm index.nginx-debian.html;
 
-        server_name e4Impact.waguramaurice.com;
+        server_name tundatamu.waguramaurice.com;
 
         location / {
                 try_files $uri $uri/ /index.php?$query_string;
@@ -31,4 +31,4 @@ listen [::]:80;
 
 }
 
-sudo ln -s /etc/nginx/sites-available/e4Impact.waguramaurice.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/tundatamu.waguramaurice.com /etc/nginx/sites-enabled/
